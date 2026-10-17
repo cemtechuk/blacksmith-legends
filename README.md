@@ -12,6 +12,7 @@ sources or notes here. The game's own repo stays private.
 |---|---|
 | `index.html` | Home: what the game is |
 | `faq.html` | Frequently asked questions |
+| `changelog.html` | What's changed, newest first: each release, then the fork's history, then Jake's |
 | `credits.html` | Jake Lee's Pixel Blacksmith, what's changed, and everyone else's credits |
 | `privacy.html` | Privacy policy (the Play Store listing links to this — keep the file name) |
 | `style.css` | The look of every page: colours, fonts, the menu, FAQ boxes |
@@ -50,6 +51,22 @@ In `faq.html`, copy one whole `<details>` block and change the words:
 
 Put it inside the `<section>` it belongs to. A new topic is a new `<section>` with an
 `<h2>` heading at the top, like the ones already there.
+
+## Adding a release to the changelog
+
+In `changelog.html`, copy the `1.0.0` `<section>` block, paste it **above** it, and change the
+heading and the bullet points:
+
+```html
+<section>
+  <h2>1.1.0 · November 2026</h2>
+  <ul>
+    <li>What changed, in a player's words.</li>
+  </ul>
+</section>
+```
+
+Keep it in the player's words: what they'll notice, not how it was built.
 
 ## Adding a new page
 

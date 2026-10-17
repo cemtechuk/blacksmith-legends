@@ -16,7 +16,7 @@ sources or notes here. The game's own repo stays private.
 | `credits.html` | Jake Lee's Pixel Blacksmith, what's changed, and everyone else's credits |
 | `privacy.html` | Privacy policy (the Play Store listing links to this — keep the file name) |
 | `style.css` | The look of every page: colours, fonts, the menu, FAQ boxes |
-| `logo.png`, `banner.jpg`, `icon.png` | Pictures (`icon.png` is the browser-tab icon) |
+| `banner.jpg`, `icon.png` | Pictures (`icon.png` is the browser-tab icon) |
 
 Links people can be sent to:
 

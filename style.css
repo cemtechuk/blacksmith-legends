@@ -42,8 +42,15 @@ nav a {
 nav a:hover { color: var(--gold); }
 nav a[aria-current="page"] { color: var(--gold); font-weight: bold; }
 
-header { text-align: center; }
-header img.logo { width: 240px; max-width: 70%; height: auto; }
+/* Read out by screen readers and search engines, not drawn: the banner already shows the name. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
 
 .banner {
   display: block;

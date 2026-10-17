@@ -19,10 +19,28 @@ body {
 main {
   max-width: 760px;
   margin: 0 auto;
-  padding: 32px 16px 64px;
+  padding: 16px 16px 64px;
 }
 
 a { color: var(--gold); }
+
+/* The menu at the top of every page. */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 20px;
+  padding: 12px 0;
+  border-bottom: 2px solid var(--edge);
+  margin-bottom: 16px;
+}
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+nav a:hover { color: var(--gold); }
+nav a[aria-current="page"] { color: var(--gold); font-weight: bold; }
 
 header { text-align: center; }
 header img.logo { width: 240px; max-width: 70%; height: auto; }
@@ -44,9 +62,27 @@ section {
   margin: 24px 0;
 }
 
-h1, h2 { color: var(--gold); line-height: 1.25; }
+h1, h2, h3 { color: var(--gold); line-height: 1.25; }
 h1 { font-size: 2rem; margin: 16px 0 4px; }
 h2 { font-size: 1.3rem; margin-top: 24px; }
+h3 { font-size: 1.1rem; margin: 20px 0 4px; }
+
+ul { padding-left: 1.2em; }
+li { margin: 4px 0; }
+
+/* FAQ: each question opens and closes on tap. */
+details {
+  border-top: 1px solid var(--edge);
+  padding: 10px 0;
+}
+details:first-of-type { border-top: none; }
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--text);
+}
+summary:hover { color: var(--gold); }
+details p, details ul { margin: 8px 0 0; }
 
 .muted { color: var(--muted); }
 

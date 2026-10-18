@@ -113,6 +113,9 @@ small (under 1 MB) so the site stays fast on phones.
 
 ## Rules worth keeping
 
+- **Never remove the `google-site-verification` tag from `index.html`.** It proves to Google
+  Search Console that this site is ours, which the Play Console developer account relies on;
+  Google keeps re-checking it.
 - **Never rename or delete `privacy.html`** — the Play Store listing points at that address.
 - **If the game starts collecting or sending anything new**, update the privacy policy and its
   "Effective" date before that version ships.

@@ -125,6 +125,66 @@ figcaption {
 }
 .shot.tall { max-width: 200px; }
 
+/* The bug report form. */
+.form label {
+  display: block;
+  font-weight: bold;
+  margin: 16px 0 6px;
+}
+.form input, .form textarea, .form select {
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 2px solid var(--edge);
+  border-radius: 4px;
+}
+.form input:focus, .form textarea:focus, .form select:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+.form ::placeholder { color: var(--muted); opacity: 0.7; }
+.form textarea { resize: vertical; }
+.form .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+}
+@media (max-width: 520px) {
+  .form .row { grid-template-columns: 1fr; }
+}
+.req { color: var(--gold); }
+.hint {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 4px 0 0;
+}
+.error { color: #e8806a; margin: 16px 0 0; }
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0 8px;
+}
+.button {
+  font: inherit;
+  font-weight: bold;
+  padding: 10px 22px;
+  color: var(--bg);
+  background: var(--gold);
+  border: 2px solid var(--gold);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button.secondary {
+  color: var(--text);
+  background: transparent;
+  border-color: var(--edge);
+}
+.button:hover { filter: brightness(1.1); }
+
 /* The picture viewer that lightbox.js opens over the page. */
 .lightbox {
   position: fixed;

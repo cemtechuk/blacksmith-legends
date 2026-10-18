@@ -12,7 +12,7 @@ sources or notes here. The game's own repo stays private.
 |---|---|
 | `index.html` | Home: what the game is |
 | `faq.html` | Frequently asked questions |
-| `bugs.html` | Bug report form. It sends nothing itself: **Send report** opens the player's email app with the report written out to the support address, and **Copy report** is the fallback. A link can fill in fields with `bugs.html?version=1.0.0&device=Pixel%209a&android=16&level=24` |
+| `bugs.html` | Bug report form. It sends nothing itself: **Send report** opens the player's email app with the report written out to the support address, and **Copy report** is the fallback. The game's **Report a Bug** button (Settings) opens it as `bugs.html#version=1.0.0&device=Pixel%209a&android=16&level=24`, filling those fields in; after a `#`, so the details never reach GitHub's servers. A `?` link works too |
 | `changelog.html` | What's changed, newest first: each release, then the fork's history, then Jake's |
 | `credits.html` | Jake Lee's Pixel Blacksmith, what's changed, and everyone else's credits |
 | `privacy.html` | Privacy policy (the Play Store listing links to this — keep the file name) |

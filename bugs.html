@@ -26,7 +26,8 @@
     You can add screenshots there before sending.</p>
 
   <!-- Nothing here is sent anywhere by the page itself: the script below only builds an email.
-       The game (or a link) can fill fields in advance with ?version=&device=&android=&level=. -->
+       The game's Report a Bug button fills fields in advance with #version=&device=&android=&level=
+       (after a #, so the details never reach the web server); a ?version=... link works too. -->
   <section>
     <form id="bug-form" class="form" novalidate>
       <label for="summary">In a few words, what's wrong? <span class="req">*</span></label>
@@ -102,10 +103,13 @@
   var form = document.getElementById('bug-form');
   var field = function (id) { return document.getElementById(id); };
 
-  // Fill in whatever the link carried, e.g. bugs.html?version=1.0.0&device=Pixel%209a
-  var params = new URLSearchParams(location.search);
+  // Fill in whatever the link carried: the game sends bugs.html#version=1.0.0&device=Pixel%209a...
+  // (after the #, which never leaves the browser); a ?version=... link works the same way.
+  var params = new URLSearchParams(location.hash.slice(1));
+  var query = new URLSearchParams(location.search);
   ['version', 'device', 'android', 'level'].forEach(function (name) {
-    if (params.get(name)) field(name).value = params.get(name);
+    var value = params.get(name) || query.get(name);
+    if (value) field(name).value = value;
   });
 
   function report() {

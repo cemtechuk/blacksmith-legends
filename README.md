@@ -17,6 +17,7 @@ sources or notes here. The game's own repo stays private.
 | `privacy.html` | Privacy policy (the Play Store listing links to this — keep the file name) |
 | `style.css` | The look of every page: colours, fonts, the menu, FAQ boxes |
 | `banner.jpg`, `icon.png` | Pictures (`icon.png` is the browser-tab icon) |
+| `lightbox.js` | Opens a tapped screenshot over the page instead of leaving it (with arrows in the gallery); any page with pictures includes it just before `</body>` |
 | `shots/` | Screenshots from the game: full size in `shots/`, small copies for the home page's gallery in `shots/thumb/`, and close-up crops (`crop-*.jpg`) used in the FAQ and changelog |
 
 Links people can be sent to:

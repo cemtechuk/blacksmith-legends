@@ -93,6 +93,38 @@ details p, details ul { margin: 8px 0 0; }
 
 .muted { color: var(--muted); }
 
+/* Screenshots. The gallery is a row that scrolls sideways; a shot is a single picture beside some text. */
+.gallery {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+}
+.gallery figure {
+  flex: 0 0 170px;
+  margin: 0;
+  scroll-snap-align: start;
+}
+.gallery img, .shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--edge);
+  border-radius: 4px;
+}
+figcaption {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.35;
+  margin-top: 6px;
+}
+.shot {
+  max-width: 320px;
+  margin: 12px 0 4px;
+}
+.shot.tall { max-width: 200px; }
+
 footer {
   text-align: center;
   color: var(--muted);

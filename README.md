@@ -17,6 +17,7 @@ sources or notes here. The game's own repo stays private.
 | `privacy.html` | Privacy policy (the Play Store listing links to this — keep the file name) |
 | `style.css` | The look of every page: colours, fonts, the menu, FAQ boxes |
 | `banner.jpg`, `icon.png` | Pictures (`icon.png` is the browser-tab icon) |
+| `shots/` | Screenshots from the game: full size in `shots/`, small copies for the home page's gallery in `shots/thumb/`, and close-up crops (`crop-*.jpg`) used in the FAQ and changelog |
 
 Links people can be sent to:
 
@@ -100,6 +101,11 @@ Keep it in the player's words: what they'll notice, not how it was built.
 <img src="picture.png" alt="What the picture shows" style="max-width:100%">
 <section> ... </section>   <!-- one of the dark boxes -->
 ```
+
+To add a screenshot to the home page's gallery, put the full picture in `shots/` and a copy
+360 pixels wide in `shots/thumb/`, then copy one `<figure>` in `index.html`'s gallery and change
+its file names, `alt` text and caption. Pictures beside FAQ answers use `<figure class="shot">`
+(add `tall` for a whole phone screen, so it doesn't fill the page).
 
 A picture is just a file in this folder: copy it in, then point `src` at its name. Keep pictures
 small (under 1 MB) so the site stays fast on phones.
